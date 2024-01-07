@@ -12,9 +12,9 @@ public class DiningReview {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
-    private String submitterDisplayName;
+    private String displayName;
 
     @ManyToOne
     private Restaurant restaurant;
@@ -25,5 +25,6 @@ public class DiningReview {
     private String commentary;
 
     private AdminReviewAction adminReviewAction;
+
 }
 

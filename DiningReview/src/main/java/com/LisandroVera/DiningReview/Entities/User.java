@@ -11,7 +11,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String displayName;
     private String city;
@@ -20,5 +20,6 @@ public class User {
     private boolean interestedInPeanutAllergies;
     private boolean interestedInEggAllergies;
     private boolean interestedInDairyAllergies;
+
 }
 
