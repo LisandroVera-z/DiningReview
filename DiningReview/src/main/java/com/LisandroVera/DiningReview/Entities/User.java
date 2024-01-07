@@ -1,8 +1,9 @@
 package com.LisandroVera.DiningReview.Entities;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import jakarta.persistence.*;
+
 
 @Data
 @AllArgsConstructor
@@ -17,10 +18,10 @@ public class User {
     private String displayName;
     private String city;
     private String state;
-    private String zipcode;
-    private boolean interestedInPeanutAllergies;
-    private boolean interestedInEggAllergies;
-    private boolean interestedInDairyAllergies;
+    private Integer zipCode;
+    private boolean peanutAllergies;
+    private boolean eggAllergies;
+    private boolean dairyAllergies;
 
 }
 
