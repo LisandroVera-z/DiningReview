@@ -1,9 +1,11 @@
 package com.LisandroVera.DiningReview;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import jakarta.persistence.*;
 
 @Data
+@AllArgsConstructor
 @Entity
 public class User {
 
