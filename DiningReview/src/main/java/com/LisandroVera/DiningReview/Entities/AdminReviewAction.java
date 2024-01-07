@@ -1,4 +1,4 @@
-package com.LisandroVera.DiningReview.Controllers;
+package com.LisandroVera.DiningReview.Entities;
 
 public enum AdminReviewAction {
 

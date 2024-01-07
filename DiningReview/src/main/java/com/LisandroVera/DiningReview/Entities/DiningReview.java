@@ -1,6 +1,5 @@
 package com.LisandroVera.DiningReview.Entities;
 
-import com.LisandroVera.DiningReview.Controllers.AdminReviewAction;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

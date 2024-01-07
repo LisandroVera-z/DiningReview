@@ -1,10 +1,12 @@
 package com.LisandroVera.DiningReview.Controllers;
 
+import com.LisandroVera.DiningReview.Entities.AdminReviewAction;
 import com.LisandroVera.DiningReview.Entities.DiningReview;
 import com.LisandroVera.DiningReview.Entities.Restaurant;
 import com.LisandroVera.DiningReview.Repositories.DiningReviewRepository;
 import com.LisandroVera.DiningReview.Repositories.RestaurantRepository;
 import com.LisandroVera.DiningReview.Repositories.UserRepository;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -36,10 +38,9 @@ public class DiningReviewController {
         }
         return diningReviewRepository.findByRestaurantIdAndAdminReviewAction(id, AdminReviewAction.ACCEPT);
     }
-
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping
-    public DiningReview postReview(@RequestBody DiningReview review) {
+    @PostMapping("/PostReview")
+    public DiningReview postReview(@RequestBody @NotNull DiningReview review) {
         if(!userRepository.existsByDisplayName(review.getDisplayName())) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
@@ -50,7 +51,7 @@ public class DiningReviewController {
 
     //Admin endpoint to get pending reviews
     @GetMapping("/admin")
-    public DiningReview getPendingReviews() {
+    public List<DiningReview> getPendingReviews() {
         return diningReviewRepository.findByAdminReviewAction(AdminReviewAction.PENDING);
     }
 
