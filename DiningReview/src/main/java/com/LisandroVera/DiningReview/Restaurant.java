@@ -1,9 +1,8 @@
 package com.LisandroVera.DiningReview;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
