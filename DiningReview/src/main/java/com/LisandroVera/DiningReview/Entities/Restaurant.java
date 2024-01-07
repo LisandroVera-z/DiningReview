@@ -1,4 +1,4 @@
-package com.LisandroVera.DiningReview;
+package com.LisandroVera.DiningReview.Entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,5 +1,6 @@
-package com.LisandroVera.DiningReview;
+package com.LisandroVera.DiningReview.Entities;
 
+import com.LisandroVera.DiningReview.Controllers.AdminReviewAction;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,5 +23,7 @@ public class DiningReview {
     private Integer eggScore;
     private Integer dairyScore;
     private String commentary;
+
+    private AdminReviewAction adminReviewAction;
 }
 

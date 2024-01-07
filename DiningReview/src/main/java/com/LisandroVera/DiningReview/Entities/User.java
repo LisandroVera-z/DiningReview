@@ -1,4 +1,4 @@
-package com.LisandroVera.DiningReview;
+package com.LisandroVera.DiningReview.Entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
