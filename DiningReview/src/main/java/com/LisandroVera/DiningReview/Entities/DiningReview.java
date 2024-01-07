@@ -8,6 +8,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 @Entity
+@Table(name = "DINING_REVIEWS")
 public class DiningReview {
 
     @Id
@@ -19,9 +20,9 @@ public class DiningReview {
     @ManyToOne
     private Restaurant restaurant;
 
-    private Integer peanutScore;
-    private Integer eggScore;
-    private Integer dairyScore;
+    private Double peanutScore;
+    private Double eggScore;
+    private Double dairyScore;
     private String commentary;
 
     private AdminReviewAction adminReviewAction;

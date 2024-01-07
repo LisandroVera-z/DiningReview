@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 @Entity
-@Table(name = "restaurants")
+@Table(name = "RESTAURANTS")
 public class Restaurant {
 
     @Id
